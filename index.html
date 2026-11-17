@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- ===================== SEO BÁSICO ===================== -->
+  <title>Foto Estudio Valencia | Fotos para título, trámites y eventos en Tlalnepantla</title>
+  <meta name="description" content="Estudio fotográfico en Tlalnepantla de Baz desde 1967. Fotos para título y diploma con revelado químico (UNAM, SEP, IPN), fotos urgentes para pasaporte, visa y credencial, paquetes de estudio, eventos sociales y video.">
+  <meta name="theme-color" content="#1b1112">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph: así se ve el enlace al compartirlo por WhatsApp o Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Foto Estudio Valencia">
+  <meta property="og:title" content="Foto Estudio Valencia, Tlalnepantla de Baz">
+  <meta property="og:description" content="Fotos para título con revelado químico, fotos urgentes para trámites, paquetes de estudio y eventos. Desde 1967.">
+  <!-- Al publicar, cambia por la dirección completa, ej. https://su-dominio.com/img/og-valencia.jpg -->
+  <meta property="og:image" content="img/og-valencia.jpg">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <!-- Tipografías: Bodoni Moda (títulos), Jost (texto), Pinyon Script (firma "Valencia") -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300..600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 (versión navegador, sin instalación) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      /* Paleta tomada de los materiales del cliente: cuarto oscuro, luz de seguridad roja, papel fotográfico y el vino de su lista de precios */
+      --color-noche: #1b1112;          /* negro de cuarto oscuro */
+      --color-noche-2: #261a1c;        /* superficies sobre fondo oscuro */
+      --color-seguridad: #d01b22;      /* rojo de luz de seguridad (botones) */
+      --color-seguridad-claro: #ff6a5c;/* rojo legible sobre fondo oscuro */
+      --color-papel: #efece6;          /* papel fotográfico */
+      --color-papel-2: #e2ddd4;        /* papel en sombra */
+      --color-hoja: #faf8f5;           /* hoja de impresión / texto claro */
+      --color-vino: #7a1d2a;           /* vino de la lista de precios */
+      --color-tinta: #231c1d;          /* texto sobre papel */
+      --color-gris: #5d5652;           /* texto secundario sobre papel */
+      --color-plata: #a8a09a;          /* texto secundario sobre oscuro */
+      --color-wa: #1a7f45;             /* botón de WhatsApp */
+
+      --font-display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+      --font-sans: "Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+      --font-script: "Pinyon Script", "Snell Roundhand", cursive;
+    }
+  </style>
+
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; }
+    body { font-feature-settings: "kern", "liga"; text-rendering: optimizeLegibility; }
+    /* En capa "base" para que las utilidades de Tailwind puedan sobrescribirlo */
+    @layer base {
+      :focus-visible { outline: 2px solid #ff6a5c; outline-offset: 3px; }
+      .sobre-papel :focus-visible, #chat-panel :focus-visible { outline-color: #7a1d2a; }
+    }
+
+    /* Bodoni con tamaño óptico moderado: trazos finos legibles también en pantallas comunes */
+    .titular { font-optical-sizing: none; font-variation-settings: "opsz" 34; }
+
+    /* Óvalo 6x9: la forma característica del estudio */
+    .ovalo { border-radius: 50%; }
+    .marco-ovalo { outline: 1px solid rgba(250, 248, 245, .28); outline-offset: 7px; }
+
+    /* Luz de seguridad del cuarto oscuro */
+    .luz-hero { background: radial-gradient(55% 60% at 74% 38%, rgba(208, 27, 34, .50), rgba(208, 27, 34, 0) 70%); }
+    .luz-titulo { background: radial-gradient(45% 55% at 12% 0%, rgba(208, 27, 34, .32), rgba(208, 27, 34, 0) 70%); }
+
+    /* Único momento animado: el retrato "se revela" como en la charola de revelado */
+    .revelado { animation: revelar 3.4s cubic-bezier(.25, .6, .2, 1) .35s both; }
+    .revelado-logo { animation: revelar-logo 3s cubic-bezier(.25, .6, .2, 1) .3s both; }
+    @keyframes revelar-logo {
+      0%   { opacity: 0; filter: blur(10px) brightness(2); }
+      100% { opacity: 1; filter: blur(0) brightness(1); }
+    }
+    @keyframes revelar {
+      0%   { filter: grayscale(1) brightness(2.7) contrast(.3); opacity: 0; }
+      12%  { opacity: 1; }
+      100% { filter: grayscale(1) brightness(1) contrast(1.05); opacity: 1; }
+    }
+
+    /* Tendedero de impresiones */
+    .pinza { width: 10px; height: 26px; background: linear-gradient(#b9a58e, #8b765f); border-radius: 2px; box-shadow: 0 1px 0 rgba(0,0,0,.4); }
+    .impresion { box-shadow: 0 18px 30px -18px rgba(0,0,0,.8); }
+
+    /* Precio con línea punteada, como lista impresa */
+    .guia { flex: 1 1 1.5rem; min-width: 1rem; border-bottom: 1px dotted rgba(93, 86, 82, .55); transform: translateY(-.35em); }
+
+    /* Indicador de "escribiendo" del chat */
+    .puntos span { display: inline-block; width: 6px; height: 6px; margin: 0 2px; border-radius: 50%; background: #a8a09a; animation: punto 1s infinite ease-in-out; }
+    .puntos span:nth-child(2) { animation-delay: .15s; }
+    .puntos span:nth-child(3) { animation-delay: .3s; }
+    @keyframes punto { 0%, 80%, 100% { transform: translateY(0); opacity: .45; } 40% { transform: translateY(-4px); opacity: 1; } }
+
+    .chat-burbuja ul { margin: .35rem 0 0; padding-left: 1.1rem; list-style: disc; }
+    .chat-burbuja li { margin: .15rem 0; }
+    .chat-burbuja a { text-decoration: underline; text-underline-offset: 2px; }
+
+    .sin-barra::-webkit-scrollbar { display: none; }
+    .sin-barra { scrollbar-width: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .revelado { animation: none; filter: grayscale(1); }
+      .revelado-logo { animation: none; }
+      .puntos span { animation: none; opacity: .8; }
+      * { transition-duration: 0s !important; }
+    }
+  </style>
+
+  <!-- Datos estructurados para Google (negocio local). Si cambian teléfono u horario, actualízalos aquí también. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Foto Estudio Valencia",
+    "description": "Estudio fotográfico profesional desde 1967. Fotos para título con revelado químico, fotos para trámites, paquetes de estudio, eventos sociales y video.",
+    "foundingDate": "1967",
+    "telephone": "+52 55 5390 0267",
+    "email": "mvp@fotoestudiovalencia.com",
+    "image": "img/og-valencia.jpg",
+    "priceRange": "$20 - $9,495 MXN",
+    "paymentAccepted": "Tarjeta de débito, Tarjeta de crédito",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Vallarta 26-1",
+      "addressLocality": "Tlalnepantla de Baz",
+      "addressRegion": "Estado de México",
+      "postalCode": "54000",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }],
+    "areaServed": ["Tlalnepantla de Baz", "Naucalpan", "Atizapán", "Cuautitlán", "Ciudad de México"],
+    "sameAs": ["https://www.facebook.com/fotoestudiovalenciadesde1967"]
+  }
+  </script>
+</head>
+
+<body class="bg-noche font-sans text-[17px] leading-relaxed text-hoja antialiased">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded focus:bg-hoja focus:px-4 focus:py-2 focus:text-tinta">Saltar al contenido</a>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header id="encabezado" class="fixed inset-x-0 top-0 z-40 transition-colors duration-300">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-5 py-3 md:px-8">
+      <a href="#inicio" class="flex items-center" aria-label="Foto Estudio Valencia, ir al inicio">
+        <img src="img/logo-valencia-horizontal-claro.svg" alt="Foto Estudio Valencia" class="h-8 w-auto sm:h-9" width="597" height="115">
+      </a>
+
+      <nav class="hidden lg:block" aria-label="Principal">
+        <ul class="flex items-center gap-7 text-[0.95rem] text-hoja/80">
+          <li><a class="transition-colors hover:text-hoja" href="#titulo">Fotos para título</a></li>
+          <li><a class="transition-colors hover:text-hoja" href="#servicios">Servicios</a></li>
+          <li><a class="transition-colors hover:text-hoja" href="#precios">Precios</a></li>
+          <li><a class="transition-colors hover:text-hoja" href="#galeria">Galería</a></li>
+          <li><a class="transition-colors hover:text-hoja" href="#estudio">El estudio</a></li>
+          <li><a class="transition-colors hover:text-hoja" href="#visitanos">Ubicación</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener"
+           class="hidden items-center gap-2 rounded-full bg-seguridad px-4 py-2 text-[0.95rem] font-medium text-white transition-colors hover:bg-[#b5141b] sm:inline-flex">
+          <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.3-18.1C18.1 1.5 15.1.2 12 .2 5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.6c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.3z"/></svg>
+          WhatsApp
+        </a>
+        <button id="menu-boton" type="button" class="inline-flex size-11 items-center justify-center rounded-full text-hoja lg:hidden" aria-controls="menu-movil" aria-expanded="false" aria-label="Abrir menú">
+          <svg id="menu-icono-abrir" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg id="menu-icono-cerrar" class="hidden size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú móvil -->
+    <nav id="menu-movil" class="hidden border-t border-hoja/10 bg-noche lg:hidden" aria-label="Menú móvil">
+      <ul class="mx-auto max-w-6xl px-5 py-3 text-lg">
+        <li><a class="block py-3" href="#titulo">Fotos para título</a></li>
+        <li><a class="block py-3" href="#servicios">Servicios</a></li>
+        <li><a class="block py-3" href="#precios">Precios</a></li>
+        <li><a class="block py-3" href="#galeria">Galería</a></li>
+        <li><a class="block py-3" href="#estudio">El estudio</a></li>
+        <li><a class="block py-3" href="#visitanos">Ubicación</a></li>
+        <li class="pt-2 pb-3">
+          <a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="inline-flex w-full items-center justify-center rounded-full bg-seguridad px-5 py-3 font-medium text-white">Escribir por WhatsApp</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <!-- ===================== INICIO / HERO ===================== -->
+    <section id="inicio" class="relative overflow-hidden">
+      <div class="luz-hero pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto grid min-h-[92svh] max-w-6xl grid-cols-1 items-center gap-8 px-5 pb-16 pt-24 md:grid-cols-12 md:gap-8 md:px-8 md:pt-32">
+
+        <div class="md:col-span-7">
+          <h1 class="titular max-w-[15ch] font-display text-[clamp(2.6rem,6.4vw,4.9rem)] font-medium leading-[1.02] tracking-[-0.01em]">
+            Fotografía de estudio en Tlalnepantla desde 1967
+          </h1>
+          <p class="mt-6 max-w-[50ch] text-lg text-hoja/80 md:text-xl">
+            Fotos para título y diploma con revelado químico real, fotos urgentes para trámites, retratos de estudio y cobertura de eventos con foto y video.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#precios" class="inline-flex items-center justify-center rounded-full bg-seguridad px-6 py-3 font-medium text-white transition-colors hover:bg-[#b5141b]">Ver precios</a>
+            <a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-hoja/30 px-6 py-3 font-medium text-hoja transition-colors hover:border-hoja/70">Escribir por WhatsApp</a>
+          </div>
+          <ul class="mt-10 space-y-2 text-[0.95rem] text-plata">
+            <li class="flex items-start gap-3">
+              <svg class="mt-1 size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span><span data-n="horarioTexto">Lunes a sábado de 9:00 a 19:00 h. Domingos con cita previa.</span><span data-estado class="block text-hoja/90"></span></span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="mt-1 size-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <a data-href="maps" href="https://www.google.com/maps/search/?api=1&query=Calle+Vallarta+26-1+Tlalnepantla+de+Baz" target="_blank" rel="noopener" class="underline-offset-4 hover:underline"><span data-n="direccionCorta">Calle Vallarta 26-1, Tlalnepantla de Baz</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Logo del estudio (vectorizado del logo original del cliente) -->
+        <figure class="order-first md:order-none md:col-span-5 md:justify-self-end">
+          <img class="revelado-logo w-52 sm:w-64 md:w-full md:max-w-[420px]" src="img/logo-valencia-claro.svg"
+               alt="Logotipo de Valencia, estudio fotográfico profesional desde 1967" width="472" height="363" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== INTRODUCCIÓN EN VIDEO (video largo del estudio) ===================== -->
+    <section id="conocenos" class="border-t border-hoja/10">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-20 md:grid-cols-12 md:items-center md:px-8 md:py-24">
+        <div class="md:col-span-5">
+          <h2 class="titular font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08]">Conoce nuestro trabajo</h2>
+          <p class="mt-5 max-w-[46ch] text-hoja/80">Bodas, XV años, retratos infantiles y familiares, fotografía y video de eventos, y nuestros servicios de impresión y enmarcado.</p>
+        </div>
+        <figure class="w-full max-w-[540px] md:col-span-7 md:justify-self-end">
+          <!-- Se reproduce solo, sin sonido, cuando aparece en pantalla -->
+          <video id="video-intro" class="aspect-square w-full bg-noche-2 shadow-[0_40px_90px_-40px_rgba(208,27,34,.7)]"
+                 controls muted loop playsinline preload="none" poster="img/poster-portafolio.jpg"
+                 aria-label="Video de presentación de Foto Estudio Valencia">
+            <source src="video/valencia-portafolio.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== FOTOS PARA TÍTULO ===================== -->
+    <section id="titulo" class="relative overflow-hidden border-t border-hoja/10">
+      <div class="luz-titulo pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="relative mx-auto grid max-w-6xl grid-cols-1 gap-16 px-5 py-20 md:grid-cols-2 md:items-center md:gap-12 md:px-8 md:py-28">
+        <div>
+          <h2 class="titular max-w-[18ch] font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08]">Fotos para título con proceso análogo</h2>
+          <p class="mt-5 max-w-[52ch] text-hoja/80">
+            Tomamos tu retrato en blanco y negro y lo revelamos con químicos, el método tradicional que piden las instituciones para el título profesional.
+          </p>
+          <dl class="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-3">
+            <div><dt class="text-sm text-plata">Medida</dt><dd class="mt-1 font-medium">Óvalo 6×9 cm, blanco y negro</dd></div>
+            <div><dt class="text-sm text-plata">Proceso</dt><dd class="mt-1 font-medium">100% revelado químico real</dd></div>
+            <div><dt class="text-sm text-plata">Normativa</dt><dd class="mt-1 font-medium">UNAM, SEP e IPN</dd></div>
+          </dl>
+
+          <!-- Se llena desde los datos del negocio (ver NEGOCIO.precios.titulo en el script) -->
+          <ul id="titulo-precios" class="mt-10 border-t border-hoja/15"></ul>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a data-href="wa" data-wa-texto="Hola, quiero información sobre las fotos para título." href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-seguridad px-6 py-3 font-medium text-white transition-colors hover:bg-[#b5141b]">Preguntar por WhatsApp</a>
+            <button type="button" data-ir-precios="titulo" class="inline-flex items-center justify-center rounded-full border border-hoja/30 px-6 py-3 font-medium text-hoja transition-colors hover:border-hoja/70">Ver tamaño diploma y título</button>
+          </div>
+        </div>
+
+        <!-- Tendedero con fotos de título y diploma reales del estudio (recortadas de su collage de medidas) -->
+        <div class="space-y-10" role="group" aria-label="Ejemplos de fotos para título y diploma hechas en el estudio">
+          <div class="relative">
+            <svg class="absolute inset-x-0 top-0 h-12 w-full" viewBox="0 0 600 48" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 6 Q300 46 600 6" stroke="#a8a09a" stroke-opacity=".6" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <ul class="relative flex items-start justify-between gap-2 px-1 sm:gap-3">
+              <li class="flex w-[18%] flex-col items-center pt-1 -rotate-2">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="234" height="354" src="img/titulo-ovalo-1.jpg" alt="Foto para título en óvalo, blanco y negro"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[15px] rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="236" height="354" src="img/titulo-ovalo-2.jpg" alt="Foto para título en óvalo con fondo gris"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[18px] -rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="232" height="356" src="img/titulo-ovalo-3.jpg" alt="Foto para título en óvalo, blanco y negro"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[15px] rotate-2">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="242" height="360" src="img/titulo-ovalo-4.jpg" alt="Foto para título en óvalo, blanco y negro"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-1 -rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="226" height="320" src="img/titulo-ovalo-5.jpg" alt="Foto para título en óvalo, blanco y negro"></div>
+              </li>
+            </ul>
+            <p class="mt-4 text-center text-sm text-plata">Óvalo para título</p>
+          </div>
+          <div class="relative">
+            <svg class="absolute inset-x-0 top-0 h-12 w-full" viewBox="0 0 600 48" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 6 Q300 46 600 6" stroke="#a8a09a" stroke-opacity=".6" stroke-width="1.5" fill="none" vector-effect="non-scaling-stroke"/>
+            </svg>
+            <ul class="relative flex items-start justify-between gap-2 px-1 sm:gap-3">
+              <li class="flex w-[18%] flex-col items-center pt-1 -rotate-2">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="194" height="274" src="img/diploma-ovalo-1.jpg" alt="Foto para diploma en óvalo, blanco y negro"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[15px] rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="202" height="282" src="img/diploma-ovalo-2.jpg" alt="Foto para diploma en óvalo con fondo gris"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[18px] -rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="200" height="290" src="img/diploma-ovalo-3.jpg" alt="Foto para diploma con birrete en óvalo"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-[15px] rotate-2">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="204" height="274" src="img/diploma-ovalo-4.jpg" alt="Foto para diploma en óvalo, blanco y negro"></div>
+              </li>
+              <li class="flex w-[18%] flex-col items-center pt-1 -rotate-1">
+                <span class="pinza" aria-hidden="true"></span>
+                <div class="ovalo impresion -mt-2 w-full bg-hoja p-1 sm:p-1.5"><img class="ovalo aspect-[2/3] w-full object-cover" loading="lazy" width="196" height="282" src="img/diploma-ovalo-5.jpg" alt="Foto para diploma con birrete en óvalo"></div>
+              </li>
+            </ul>
+            <p class="mt-4 text-center text-sm text-plata">Óvalo para diploma</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fotos para trámites e identificación: collage original del estudio -->
+      <div class="relative mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-center md:gap-12">
+          <div class="md:col-span-5">
+            <h3 class="font-display text-[1.6rem] font-medium leading-tight md:text-[2rem]">Fotos para trámites e identificación</h3>
+            <p class="mt-3 max-w-[48ch] text-hoja/80">Pasaporte, filiación FM3, óvalo mignon, credencial, cartilla, infantil, visa, postal, título, diploma, título 4.1×5.1, restauración y medidas especiales. También fotos urgentes y envío electrónico de tus archivos.</p>
+          </div>
+          <figure class="md:col-span-7">
+            <video class="aspect-video w-full rounded-[3px] bg-noche-2" controls preload="none" playsinline poster="img/poster-presentacion.jpg"
+                   aria-label="Video de fotografía análoga para identificación">
+              <source src="video/valencia-presentacion.mp4" type="video/mp4">
+            </video>
+            <figcaption class="mt-3 text-sm text-plata">Fotografía análoga para identificación, con proceso químico tradicional.</figcaption>
+          </figure>
+        </div>
+        <figure class="mt-8">
+          <div class="sin-barra -mx-5 overflow-x-auto px-5 md:mx-0 md:px-0">
+            <a href="img/medidas-identificacion.jpg" target="_blank" rel="noopener" class="block min-w-[760px] md:min-w-0" aria-label="Abrir en grande las muestras de fotos para identificación">
+              <img class="w-full rounded-[3px] border border-hoja/10" loading="lazy" width="1600" height="679" src="img/medidas-identificacion.jpg"
+                   alt="Muestras de fotos de pasaporte, óvalo mignon, credencial, título, filiación, cartilla, diploma, restauración, infantil, postal, visa y título 4.1 por 5.1">
+            </a>
+          </div>
+          <figcaption class="mt-3 text-sm text-plata"><span class="md:hidden">Desliza para ver todas las medidas o tócala para verla en grande.</span><span class="hidden md:inline">Haz clic en la imagen para verla en grande.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS ===================== -->
+    <section id="servicios" class="sobre-papel bg-papel text-tinta">
+      <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-12">
+          <h2 class="titular font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08] md:col-span-5">Servicios</h2>
+          <p class="max-w-[55ch] text-gris md:col-span-7 md:pt-3">
+            Fotografía para documentos, retrato de estudio y eventos, con impresión y revelado en el mismo estudio. Si necesitas una medida especial, también la hacemos.
+          </p>
+        </div>
+
+        <!-- Servicios de documentos: solo texto, sin imagen -->
+        <div class="mt-12 grid grid-cols-1 gap-x-12 border-t border-papel-2 md:grid-cols-2">
+          <div class="border-b border-papel-2 py-8">
+            <h3 class="font-display text-2xl font-medium md:text-[1.75rem]">Fotos para trámites e identificación</h3>
+            <p class="mt-2 max-w-[52ch] text-gris">Pasaporte, visa, cartilla, credencial en cuadro u óvalo mignon, infantil, filiación FM3 y postal. Hacemos fotografías urgentes y entregamos archivos digitales.</p>
+            <div class="mt-4 flex items-center gap-5">
+              <p class="font-display text-xl text-vino">Desde $80</p>
+              <button type="button" data-ir-precios="identificacion" class="text-[0.95rem] font-medium text-vino underline underline-offset-4">Ver precios</button>
+            </div>
+          </div>
+          <div class="border-b border-papel-2 py-8">
+            <h3 class="font-display text-2xl font-medium md:text-[1.75rem]">Fotos para título y diploma</h3>
+            <p class="mt-2 max-w-[52ch] text-gris">Proceso análogo con revelado químico. Óvalo 6×9 cm, tamaño título, título 4.1×5.1 y tamaño diploma, según la normativa de la UNAM, la SEP y el IPN.</p>
+            <div class="mt-4 flex items-center gap-5">
+              <p class="font-display text-xl text-vino">Desde $250</p>
+              <button type="button" data-ir-precios="titulo" class="text-[0.95rem] font-medium text-vino underline underline-offset-4">Ver precios</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicios con imagen -->
+        <ul class="divide-y divide-papel-2 border-b border-papel-2">
+          <li class="grid gap-5 py-8 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr_auto] md:items-center md:gap-10">
+            <img class="aspect-[4/3] w-48 border-[6px] border-hoja object-cover shadow-[0_10px_24px_-14px_rgba(35,28,29,.6)] sm:w-full" loading="lazy" width="480" height="360"
+                 src="https://images.unsplash.com/photo-1617463874381-85b513b3e991?auto=format&fit=crop&w=480&h=360&q=75" alt="Estudio fotográfico con fondo blanco y luces de estudio">
+            <div>
+              <h3 class="font-display text-2xl font-medium md:text-[1.75rem]">Paquetes de estudio</h3>
+              <p class="mt-2 max-w-[60ch] text-gris">Retrato en estudio con una ampliación grande y tres de 8×10. En promoción, cada paquete incluye marco y pruebas.</p>
+            </div>
+            <div class="flex items-center gap-5 sm:col-start-2 md:col-start-auto md:flex-col md:items-end md:gap-1">
+              <p class="font-display text-xl text-vino">Desde $4,495</p>
+              <button type="button" data-ir-precios="paquetes" class="text-[0.95rem] font-medium text-vino underline underline-offset-4">Ver precios</button>
+            </div>
+          </li>
+
+          <li class="grid gap-5 py-8 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr_auto] md:items-center md:gap-10">
+            <!-- Álbum de boda del estudio (foto del cliente) -->
+            <img class="aspect-[4/3] w-48 border-[6px] border-hoja object-cover shadow-[0_10px_24px_-14px_rgba(35,28,29,.6)] sm:w-full" loading="lazy" width="1200" height="900"
+                 src="img/album-boda-1.jpg" alt="Álbum de boda Valencia abierto con fotografías de los novios">
+            <div>
+              <h3 class="font-display text-2xl font-medium md:text-[1.75rem]">Eventos sociales y video</h3>
+              <p class="mt-2 max-w-[60ch] text-gris">Seguimiento fotográfico de 6 horas, video de 6 horas, libro de firmas y álbum con la firma Valencia. Cubrimos Tlalnepantla, Naucalpan, Atizapán, Cuautitlán y la Ciudad de México.</p>
+            </div>
+            <div class="flex items-center gap-5 sm:col-start-2 md:col-start-auto md:flex-col md:items-end md:gap-1">
+              <p class="font-display text-xl text-vino">Desde $3,495</p>
+              <button type="button" data-ir-precios="eventos" class="text-[0.95rem] font-medium text-vino underline underline-offset-4">Ver precios</button>
+            </div>
+          </li>
+
+          <li class="grid gap-5 py-8 sm:grid-cols-[200px_1fr] md:grid-cols-[240px_1fr_auto] md:items-center md:gap-10">
+            <img class="aspect-[4/3] w-48 border-[6px] border-hoja object-cover shadow-[0_10px_24px_-14px_rgba(35,28,29,.6)] sm:w-full" loading="lazy" width="480" height="360"
+                 src="https://images.unsplash.com/photo-1722173205783-d602329f0743?auto=format&fit=crop&w=480&h=360&q=75" alt="Fotografías antiguas en blanco y negro con un marco de madera">
+            <div>
+              <h3 class="font-display text-2xl font-medium md:text-[1.75rem]">Impresión, restauración y archivos</h3>
+              <p class="mt-2 max-w-[60ch] text-gris">Impresiones de 4×6 a 20×24, restauración de fotografías antiguas, collage y envío electrónico de tus archivos. También fotografía de producto y comercial.</p>
+            </div>
+            <div class="sm:col-start-2 md:col-start-auto md:text-right">
+              <button type="button" data-ir-precios="impresiones" class="text-[0.95rem] font-medium text-vino underline underline-offset-4">Ver precios</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PRECIOS ===================== -->
+    <section id="precios" class="sobre-papel bg-papel-2 text-tinta">
+      <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-12">
+          <div class="md:col-span-4">
+            <h2 class="titular font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08]">Precios</h2>
+            <p class="mt-4 max-w-[40ch] text-gris">Precios en pesos mexicanos. Para medidas especiales o para apartar fecha, escríbenos por WhatsApp.</p>
+          </div>
+
+          <div class="min-w-0 md:col-span-8">
+            <!-- Pestañas de categorías (se generan desde NEGOCIO.precios) -->
+            <div id="precios-tabs" role="tablist" aria-label="Categorías de precios"
+                 class="sin-barra -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 md:mx-0 md:flex-wrap md:px-0"></div>
+
+            <!-- Hoja de precios con estilo de lista impresa -->
+            <div id="precios-panel" role="tabpanel" tabindex="0"
+                 class="mt-5 rounded-[3px] border border-[#d6d0c5] bg-hoja px-5 py-7 shadow-[0_24px_40px_-30px_rgba(35,28,29,.55)] sm:px-9 sm:py-10">
+              <noscript><p>Activa JavaScript para ver la lista de precios o llámanos al 55 5390 0267.</p></noscript>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section id="galeria" class="bg-noche">
+      <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <h2 class="titular font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08]">Galería</h2>
+          <a data-href="fb" href="https://www.facebook.com/fotoestudiovalenciadesde1967" target="_blank" rel="noopener" class="text-[0.95rem] text-plata underline underline-offset-4 hover:text-hoja">Más trabajos en Facebook</a>
+        </div>
+
+        <!-- GALERÍA: fotos de muestra + álbum del estudio. Cambia cada src por fotos reales cuando lleguen -->
+        <div class="mt-10 grid auto-rows-[150px] grid-cols-2 gap-2 sm:auto-rows-[190px] md:auto-rows-[230px] md:grid-cols-4 md:gap-3">
+          <img class="row-span-2 h-full w-full object-cover" loading="lazy" width="600" height="900"
+               src="https://images.unsplash.com/photo-1654580342825-06483f272b87?auto=format&fit=crop&w=600&h=900&q=75" alt="Novios bajo el velo en blanco y negro">
+          <img class="h-full w-full object-cover md:col-span-2" loading="lazy" width="1200" height="900"
+               src="img/album-boda-2.jpg" alt="Álbum de boda Valencia con fotos de la ceremonia y su estuche">
+          <img class="h-full w-full object-cover" loading="lazy" width="600" height="450"
+               src="https://images.unsplash.com/photo-1503525443530-339273ca8a86?auto=format&fit=crop&w=600&h=450&q=75" alt="Novio en la recepción de una boda">
+          <img class="h-full w-full object-cover" loading="lazy" width="600" height="450"
+               src="https://images.unsplash.com/photo-1588420635201-3a9e2a2a0a07?auto=format&fit=crop&w=600&h=450&q=75" alt="Cámara fotográfica de película">
+          <img class="row-span-2 h-full w-full object-cover" loading="lazy" width="600" height="900"
+               src="https://images.unsplash.com/photo-1607357910286-1ff94ac13c24?auto=format&fit=crop&w=600&h=900&q=75" alt="Pareja de novios en un salón">
+          <img class="row-span-2 h-full w-full object-cover" loading="lazy" width="600" height="900"
+               src="https://images.unsplash.com/photo-1611550287705-7ff8b459c8eb?auto=format&fit=crop&w=600&h=900&q=75" alt="Fotógrafo con cámara durante una boda">
+          <img class="h-full w-full object-cover md:col-span-2" loading="lazy" width="900" height="450"
+               src="https://images.unsplash.com/photo-1784722237830-076dacaef6a6?auto=format&fit=crop&w=900&h=450&q=75" alt="Fotografías antiguas de boda y retratos familiares">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== EL ESTUDIO / NOSOTROS ===================== -->
+    <section id="estudio" class="sobre-papel bg-papel text-tinta">
+      <div class="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
+          <div class="md:col-span-5">
+            <img src="img/logo-valencia-oscuro.svg" alt="" aria-hidden="true" class="w-60 sm:w-72" width="472" height="363" loading="lazy">
+            <h2 class="titular mt-6 font-display text-[clamp(1.6rem,3vw,2.25rem)] font-medium leading-tight">El estudio</h2>
+          </div>
+          <div class="md:col-span-7 md:pt-4">
+            <p class="max-w-[58ch] text-lg">
+              Llevamos <span data-anios>59</span> años en el centro de Tlalnepantla de Baz. Trabajamos la fotografía análoga y los procesos químicos tradicionales junto con la fotografía digital, para que salgas con la foto que te piden y el día que la necesitas.
+            </p>
+            <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+              <li class="border-t-2 border-vino pt-3">
+                <p class="font-medium">Ambiente apto para niños</p>
+                <p class="mt-1 text-[0.95rem] text-gris">Fotos infantiles y familiares.</p>
+              </li>
+              <li class="border-t-2 border-vino pt-3">
+                <p class="font-medium">Pago con tarjeta</p>
+                <p class="mt-1 text-[0.95rem] text-gris">Débito y crédito.</p>
+              </li>
+              <li class="border-t-2 border-vino pt-3">
+                <p class="font-medium">Consulta gratuita</p>
+                <p class="mt-1 text-[0.95rem] text-gris">Te orientamos antes de contratar.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Opiniones reales publicadas en Google (tomadas de la página anterior del estudio) -->
+        <div class="mt-20">
+          <h3 class="font-display text-2xl font-medium">Lo que dicen nuestros clientes</h3>
+          <div class="mt-8 grid gap-8 md:grid-cols-3">
+            <figure>
+              <blockquote class="font-display text-xl italic leading-snug">“Servicio rápido y efectivo. Me tuvieron las fotos de titulación en una hora.”</blockquote>
+              <figcaption class="mt-3 text-[0.95rem] text-gris">Carlos L., opinión en Google</figcaption>
+            </figure>
+            <figure>
+              <blockquote class="font-display text-xl italic leading-snug">“Te pueden prestar un saco, corbata y camisa en caso de ser necesario.”</blockquote>
+              <figcaption class="mt-3 text-[0.95rem] text-gris">Vane García, opinión en Google</figcaption>
+            </figure>
+            <figure>
+              <blockquote class="font-display text-xl italic leading-snug">“Fotos urgentes en 5 minutos (infantiles). Amables y atentos.”</blockquote>
+              <figcaption class="mt-3 text-[0.95rem] text-gris">Alan J., opinión en Google</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== UBICACIÓN Y CONTACTO ===================== -->
+    <section id="visitanos" class="bg-noche">
+      <div class="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-5 py-20 md:grid-cols-12 md:px-8 md:py-28">
+        <div class="md:col-span-5">
+          <h2 class="titular font-display text-[clamp(2rem,4.2vw,3.25rem)] font-medium leading-[1.08]">Visítanos</h2>
+          <address class="mt-6 not-italic text-lg">
+            <span data-n="calle">Calle Vallarta 26-1</span><br>
+            <span data-n="ciudadCompleta">Tlalnepantla de Baz, Estado de México, C.P. 54000</span>
+          </address>
+
+          <h3 class="mt-10 text-sm text-plata">Horario</h3>
+          <dl id="horario-lista" class="mt-3 space-y-1"></dl>
+          <p data-estado class="mt-3 text-[0.95rem] text-hoja/90"></p>
+
+          <h3 class="mt-10 text-sm text-plata">Contacto</h3>
+          <ul class="mt-3 space-y-2">
+            <li>Teléfono: <a data-href="tel" href="tel:+525553900267" class="underline underline-offset-4"><span data-n="telefonoVisible">55 5390 0267</span></a></li>
+            <li>WhatsApp: <a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="underline underline-offset-4"><span data-n="whatsappVisible">56 4388 6198</span></a></li>
+            <li>Correo: <a data-href="mail" href="mailto:mvp@fotoestudiovalencia.com" class="break-all underline underline-offset-4"><span data-n="email">mvp@fotoestudiovalencia.com</span></a></li>
+            <li>Facebook: <a data-href="fb" href="https://www.facebook.com/fotoestudiovalenciadesde1967" target="_blank" rel="noopener" class="underline underline-offset-4">fotoestudiovalenciadesde1967</a></li>
+          </ul>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a data-href="maps" href="https://www.google.com/maps/search/?api=1&query=Calle+Vallarta+26-1+Tlalnepantla+de+Baz" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full bg-seguridad px-6 py-3 font-medium text-white transition-colors hover:bg-[#b5141b]">Cómo llegar</a>
+            <a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-full border border-hoja/30 px-6 py-3 font-medium text-hoja transition-colors hover:border-hoja/70">Escribir por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="md:col-span-7">
+          <iframe data-mapa title="Mapa de Foto Estudio Valencia en Calle Vallarta 26-1, Tlalnepantla de Baz"
+                  class="h-[360px] w-full rounded-[3px] border border-hoja/10 md:h-full md:min-h-[520px]"
+                  style="filter: grayscale(1) invert(.92) contrast(.9);"
+                  src="https://www.google.com/maps?q=Calle+Vallarta+26-1,+Tlalnepantla+de+Baz,+Estado+de+M%C3%A9xico,+54000&output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="border-t border-hoja/10 bg-[#140c0d] pb-28 pt-12 sm:pb-12">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 text-[0.95rem] text-plata md:flex-row md:items-center md:justify-between md:px-8">
+      <img src="img/logo-valencia-horizontal-claro.svg" alt="Foto Estudio Valencia" class="h-8 w-auto self-start md:self-auto" width="597" height="115" loading="lazy">
+      <p>© <span data-anio-actual>2026</span> Foto Estudio Valencia. Tlalnepantla de Baz, Estado de México.</p>
+      <ul class="flex gap-5">
+        <li><a data-href="fb" href="https://www.facebook.com/fotoestudiovalenciadesde1967" target="_blank" rel="noopener" class="hover:text-hoja">Facebook</a></li>
+        <li><a data-href="wa" href="https://wa.me/5215643886198" target="_blank" rel="noopener" class="hover:text-hoja">WhatsApp</a></li>
+        <li><a data-href="tel" href="tel:+525553900267" class="hover:text-hoja">Llamar</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ===================== CHATBOT ===================== -->
+  <button id="chat-lanzador" type="button"
+          class="fixed bottom-5 right-5 z-50 inline-flex size-[60px] items-center justify-center rounded-full bg-seguridad text-white shadow-[0_14px_30px_-10px_rgba(208,27,34,.8)] transition-transform hover:scale-105"
+          aria-controls="chat-panel" aria-expanded="false" aria-label="Abrir chat de ayuda">
+    <svg id="chat-icono-abrir" class="size-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5.5h16v10H9.5L5 19.5v-4H4z" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+    <svg id="chat-icono-cerrar" class="hidden size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+
+  <section id="chat-panel" hidden aria-label="Chat de ayuda de Foto Estudio Valencia"
+           class="fixed inset-0 z-50 flex flex-col overflow-hidden bg-hoja text-tinta sm:inset-auto sm:bottom-[92px] sm:right-5 sm:h-[min(620px,calc(100svh-120px))] sm:w-[390px] sm:rounded-2xl sm:shadow-[0_30px_70px_-20px_rgba(27,17,18,.6)]">
+    <header class="flex items-center gap-3 bg-noche px-4 py-3 text-hoja">
+      <span class="relative inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-noche-2">
+        <svg class="size-6" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="2.6"/><circle cx="21.6" cy="18.6" r="11.2" stroke="currentColor" stroke-width="2.6"/></svg>
+        <span class="absolute bottom-0 right-0 size-3 rounded-full border-2 border-noche bg-[#34c759]" aria-hidden="true"></span>
+      </span>
+      <div class="min-w-0 flex-1 leading-tight">
+        <p class="font-medium">Asistente Valencia</p>
+        <p class="flex items-center gap-1.5 text-[0.82rem] text-plata"><span class="size-2 rounded-full bg-[#34c759]" aria-hidden="true"></span>En línea</p>
+      </div>
+      <button id="chat-cerrar" type="button" class="inline-flex size-10 items-center justify-center rounded-full text-hoja/80 hover:text-hoja" aria-label="Cerrar chat">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </header>
+
+    <ol id="chat-log" role="log" aria-live="polite" aria-relevant="additions" class="flex-1 space-y-3 overflow-y-auto bg-papel px-4 py-5"></ol>
+
+    <div class="border-t border-papel-2 bg-hoja px-3 pb-3 pt-2">
+      <div id="chat-sugerencias" class="sin-barra flex gap-2 overflow-x-auto pb-2" aria-label="Preguntas sugeridas"></div>
+      <form id="chat-form" class="flex items-center gap-2" autocomplete="off">
+        <label for="chat-entrada" class="sr-only">Escribe tu pregunta</label>
+        <input id="chat-entrada" type="text" maxlength="300" placeholder="Escribe tu pregunta…"
+               class="min-w-0 flex-1 rounded-full border border-papel-2 bg-white px-4 py-2.5 text-[16px] text-tinta placeholder:text-gris/70 focus:border-vino focus:outline-none focus:ring-2 focus:ring-vino/20">
+        <button type="submit" class="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-seguridad text-white" aria-label="Enviar">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 12l16-7-6 16-3-6.5z" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <p class="mt-2 px-1 text-[0.75rem] leading-snug text-gris">Respuestas automáticas con la información del estudio. Para citas y pedidos te pasamos con una persona por WhatsApp.</p>
+    </div>
+  </section>
+
+  <script>
+  /* =====================================================================
+     DATOS DEL NEGOCIO
+     Todo lo que muestra la página (precios, horario, contacto) y todo lo
+     que responde el chatbot sale de este objeto. Si cambia un precio,
+     cámbialo aquí y se actualiza en la lista de precios y en el chat.
+     ===================================================================== */
+  const NEGOCIO = {
+    nombre: 'Foto Estudio Valencia',
+    fundacion: 1967,
+
+    // Número de WhatsApp en formato internacional, sin "+" ni espacios
+    whatsapp: '5215643886198',
+    whatsappVisible: '56 4388 6198',
+    telefono: '+525553900267',
+    telefonoVisible: '55 5390 0267',
+    email: 'mvp@fotoestudiovalencia.com',
+    facebook: 'https://www.facebook.com/fotoestudiovalenciadesde1967',
+
+    direccion: {
+      calle: 'Calle Vallarta 26-1',
+      ciudad: 'Tlalnepantla de Baz',
+      estado: 'Estado de México',
+      cp: '54000'
+    },
+
+    // Horario: día 0 = domingo ... 6 = sábado. "cita: true" = solo con cita previa
+    horario: [
+      { dia: 'Domingo',   cita: true },
+      { dia: 'Lunes',     abre: '09:00', cierra: '19:00' },
+      { dia: 'Martes',    abre: '09:00', cierra: '19:00' },
+      { dia: 'Miércoles', abre: '09:00', cierra: '19:00' },
+      { dia: 'Jueves',    abre: '09:00', cierra: '19:00' },
+      { dia: 'Viernes',   abre: '09:00', cierra: '19:00' },
+      { dia: 'Sábado',    abre: '09:00', cierra: '19:00' }
+    ],
+    horarioTexto: 'Lunes a sábado de 9:00 a 19:00 h. Domingos con cita previa.',
+
+    pagos: ['tarjeta de débito', 'tarjeta de crédito'],
+    zonasEventos: ['Tlalnepantla', 'Naucalpan', 'Atizapán', 'Cuautitlán', 'la Ciudad de México'],
+
+    precios: {
+      identificacion: [
+        { nombre: 'Tamaño infantil',        piezas: 8, precio: 80,  adherible: 100, claves: ['infantil'] },
+        { nombre: 'Tamaño credencial cuadro', piezas: 6, precio: 120, adherible: 140, claves: ['credencial cuadr', 'cuadrad', 'cuadro'] },
+        { nombre: 'Tamaño credencial óvalo',  piezas: 6, precio: 120, adherible: 150, claves: ['credencial oval', 'oval', 'mignon'] },
+        { nombre: 'Tamaño cartilla',        piezas: 6, precio: 120, claves: ['cartilla'] },
+        { nombre: 'Tamaño pasaporte',                  precio: 150, claves: ['pasaporte'] },
+        { nombre: 'Archivos digitales', detalle: 'Infantil, credencial cuadro y óvalo', precio: 150, claves: ['digital', 'archivo'] }
+      ],
+      titulo: [
+        { nombre: 'Tamaño diploma', piezas: 3, precio: 250, adherible: 280, claves: ['diploma'] },
+        { nombre: 'Tamaño título',  piezas: 3, precio: 295, adherible: 330, claves: ['tamano titulo'] },
+        { nombre: 'Título UNAM',    piezas: 6, precio: 690, claves: ['unam'] }
+      ],
+      impresiones: [
+        { nombre: 'Impresión 4×6',   precio: 20,  claves: ['4x6'] },
+        { nombre: 'Impresión 6×8',   precio: 120, claves: ['6x8'] },
+        { nombre: 'Impresión 8×10',  precio: 195, claves: ['8x10'] },
+        { nombre: 'Impresión 11×14', precio: 295, claves: ['11x14'] },
+        { nombre: 'Impresión 16×20', precio: 595, claves: ['16x20'] },
+        { nombre: 'Impresión 20×24', precio: 895, claves: ['20x24'] }
+      ],
+      paquetes: [
+        { nombre: '1 de 16×20 y 3 de 8×10', precio: 4495 },
+        { nombre: '1 de 20×24 y 3 de 8×10', precio: 5495 },
+        { nombre: '1 de 24×30 y 3 de 8×10', precio: 6495 },
+        { nombre: '1 de 1×75 y 3 de 8×10',  precio: 8495 }
+      ],
+      eventos: [
+        { nombre: 'Fotografía social', detalle: 'Seguimiento fotográfico, 6 horas', precio: 9495, claves: ['social', 'foto'] },
+        { nombre: 'Video',             detalle: '6 horas',                          precio: 8495, claves: ['video', 'grab'] },
+        { nombre: 'Libro de firmas',                                                precio: 3495, claves: ['libro', 'firmas'] }
+      ]
+    }
+  };
+
+  // Categorías de la lista de precios (orden de las pestañas)
+  const CATEGORIAS = [
+    { id: 'identificacion', pestana: 'Identificación', titulo: 'Fotografías para identificación',
+      nota: '¿Visa, filiación FM3, postal o una medida especial? Pregunta el precio por WhatsApp.' },
+    { id: 'titulo', pestana: 'Título y diploma', titulo: 'Título y diploma',
+      nota: 'Proceso análogo: óvalo 6×9 cm en blanco y negro, revelado químico real, normativa UNAM, SEP e IPN.' },
+    { id: 'impresiones', pestana: 'Impresiones', titulo: 'Impresiones', nota: '' },
+    { id: 'paquetes', pestana: 'Paquetes de estudio', titulo: 'Paquetes de estudio',
+      nota: 'Promoción: cada paquete incluye marco y pruebas.' },
+    { id: 'eventos', pestana: 'Eventos y video', titulo: 'Eventos sociales',
+      nota: 'Cubrimos Tlalnepantla, Naucalpan, Atizapán, Cuautitlán y la Ciudad de México.' }
+  ];
+
+  /* ===================== UTILIDADES ===================== */
+  const $  = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const dinero = n => '$' + n.toLocaleString('es-MX');
+  const escapar = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const normalizar = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+                           .replace(/×/g, 'x').replace(/(\d)\s*x\s*(\d)/g, '$1x$2')
+                           .replace(/[^a-z0-9x\s]/g, ' ').replace(/\s+/g, ' ').trim();
+  const linkWhatsApp = (texto = 'Hola, vengo de la página web y quiero más información.') =>
+    `https://wa.me/${NEGOCIO.whatsapp}?text=${encodeURIComponent(texto)}`;
+  const direccionCompleta = () => {
+    const d = NEGOCIO.direccion;
+    return `${d.calle}, ${d.ciudad}, ${d.estado}, C.P. ${d.cp}`;
+  };
+  const linkMapa = () => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(direccionCompleta())}`;
+  const a12h = hhmm => { const [h, m] = hhmm.split(':').map(Number); return `${h}:${String(m).padStart(2, '0')}`; };
+
+  /* Estado "abierto / cerrado" según la hora de la Ciudad de México */
+  function estadoActual() {
+    const partes = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Mexico_City', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+    const get = t => partes.find(p => p.type === t).value;
+    const dias = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    const hoy = dias[get('weekday')];
+    const minutos = Number(get('hour')) * 60 + Number(get('minute'));
+    const aMin = s => { const [h, m] = s.split(':').map(Number); return h * 60 + m; };
+    const h = NEGOCIO.horario[hoy];
+    if (h.cita) return { abierto: false, texto: 'Hoy domingo atendemos solo con cita previa.' };
+    if (minutos >= aMin(h.abre) && minutos < aMin(h.cierra)) return { abierto: true, texto: `Abierto ahora, cerramos a las ${a12h(h.cierra)} h.` };
+    if (minutos < aMin(h.abre)) return { abierto: false, texto: `Cerrado ahora, hoy abrimos a las ${a12h(h.abre)} h.` };
+    for (let i = 1; i <= 7; i++) {
+      const sig = NEGOCIO.horario[(hoy + i) % 7];
+      if (!sig.cita) return { abierto: false, texto: `Cerrado ahora, abrimos ${i === 1 ? 'mañana' : 'el ' + sig.dia.toLowerCase()} a las ${a12h(sig.abre)} h.` };
+    }
+    return { abierto: false, texto: '' };
+  }
+
+  /* ===================== DATOS EN LA PÁGINA ===================== */
+  function pintarDatos() {
+    const d = NEGOCIO.direccion;
+    const valores = {
+      horarioTexto: NEGOCIO.horarioTexto,
+      direccionCorta: `${d.calle}, ${d.ciudad}`,
+      calle: d.calle,
+      ciudadCompleta: `${d.ciudad}, ${d.estado}, C.P. ${d.cp}`,
+      telefonoVisible: NEGOCIO.telefonoVisible,
+      whatsappVisible: NEGOCIO.whatsappVisible,
+      email: NEGOCIO.email
+    };
+    $$('[data-n]').forEach(el => { if (valores[el.dataset.n] != null) el.textContent = valores[el.dataset.n]; });
+
+    const enlaces = { tel: `tel:${NEGOCIO.telefono}`, mail: `mailto:${NEGOCIO.email}`, fb: NEGOCIO.facebook, maps: linkMapa() };
+    $$('[data-href]').forEach(el => {
+      const tipo = el.dataset.href;
+      el.href = tipo === 'wa' ? linkWhatsApp(el.dataset.waTexto) : enlaces[tipo];
+    });
+
+    const anio = new Date().getFullYear();
+    $$('[data-anios]').forEach(el => el.textContent = anio - NEGOCIO.fundacion);
+    $$('[data-anio-actual]').forEach(el => el.textContent = anio);
+
+    const estado = estadoActual();
+    $$('[data-estado]').forEach(el => {
+      el.innerHTML = `<span class="mr-1.5 inline-block size-2 rounded-full ${estado.abierto ? 'bg-[#34c759]' : 'bg-plata'}" aria-hidden="true"></span>${estado.texto}`;
+    });
+
+    $('#horario-lista').innerHTML = NEGOCIO.horario.slice(1).concat(NEGOCIO.horario[0]).map(h => `
+      <div class="flex justify-between gap-6 border-b border-hoja/10 py-1.5 sm:max-w-sm">
+        <dt>${h.dia}</dt><dd class="text-hoja/85">${h.cita ? 'Con cita previa' : `${a12h(h.abre)} a ${a12h(h.cierra)} h`}</dd>
+      </div>`).join('');
+
+  }
+
+  /* ===================== LISTA DE PRECIOS ===================== */
+  function filaPrecio(item, tema = 'papel') {
+    const secundario = tema === 'papel' ? 'text-gris' : 'text-plata';
+    const precioColor = tema === 'papel' ? 'text-vino' : 'text-hoja';
+    const sub = [item.piezas ? `${item.piezas} ${item.piezas === 1 ? 'pieza' : 'piezas'}` : '', item.detalle || ''].filter(Boolean).join(', ');
+    return `
+      <li class="flex items-baseline gap-3 py-3">
+        <span class="min-w-0">
+          <span class="font-medium">${item.nombre}</span>
+          ${sub ? `<span class="block text-[0.9rem] ${secundario}">${sub}</span>` : ''}
+        </span>
+        <span class="guia" aria-hidden="true"></span>
+        <span class="shrink-0 text-right">
+          <span class="font-display text-[1.35rem] ${precioColor}">${dinero(item.precio)}</span>
+          ${item.adherible ? `<span class="block text-[0.85rem] ${secundario}">con adherible ${dinero(item.adherible)}</span>` : ''}
+        </span>
+      </li>`;
+  }
+
+  function pintarPrecios() {
+    const tabs = $('#precios-tabs');
+    const panel = $('#precios-panel');
+    tabs.innerHTML = CATEGORIAS.map((c, i) => `
+      <button type="button" role="tab" id="tab-${c.id}" data-cat="${c.id}" aria-controls="precios-panel"
+              aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"
+              class="shrink-0 rounded-full border px-4 py-2 text-[0.95rem] transition-colors aria-selected:border-vino aria-selected:bg-vino aria-selected:text-hoja border-[#cfc8bc] text-tinta hover:border-vino">
+        ${c.pestana}
+      </button>`).join('');
+
+    const mostrar = id => {
+      const cat = CATEGORIAS.find(c => c.id === id);
+      $$('[role="tab"]', tabs).forEach(t => {
+        const activo = t.dataset.cat === id;
+        t.setAttribute('aria-selected', activo);
+        t.tabIndex = activo ? 0 : -1;
+      });
+      panel.setAttribute('aria-labelledby', `tab-${id}`);
+      panel.innerHTML = `
+        <div class="flex items-end justify-between gap-4 border-b border-papel-2 pb-4">
+          <h3 class="font-display text-[1.75rem] font-medium leading-tight text-tinta sm:text-[2rem]">${cat.titulo}</h3>
+          <span class="font-script text-3xl leading-none text-vino" aria-hidden="true">Valencia</span>
+        </div>
+        <ul class="mt-2">${NEGOCIO.precios[id].map(it => filaPrecio(it)).join('')}</ul>
+        ${cat.nota ? `<p class="mt-5 text-[0.95rem] text-gris">${cat.nota}</p>` : ''}
+        <a href="${linkWhatsApp(`Hola, vengo de la página web. Quiero información de: ${cat.titulo}.`)}" target="_blank" rel="noopener"
+           class="mt-6 inline-flex items-center justify-center rounded-full bg-vino px-5 py-2.5 font-medium text-hoja transition-colors hover:bg-[#62151f]">Preguntar por WhatsApp</a>`;
+    };
+
+    tabs.addEventListener('click', e => { const b = e.target.closest('[role="tab"]'); if (b) mostrar(b.dataset.cat); });
+    tabs.addEventListener('keydown', e => {
+      const lista = $$('[role="tab"]', tabs);
+      const i = lista.indexOf(document.activeElement);
+      if (i < 0) return;
+      let j = null;
+      if (e.key === 'ArrowRight') j = (i + 1) % lista.length;
+      if (e.key === 'ArrowLeft') j = (i - 1 + lista.length) % lista.length;
+      if (e.key === 'Home') j = 0;
+      if (e.key === 'End') j = lista.length - 1;
+      if (j !== null) { e.preventDefault(); lista[j].focus(); mostrar(lista[j].dataset.cat); }
+    });
+
+    // Botones "Ver precios" de otras secciones
+    $$('[data-ir-precios]').forEach(b => b.addEventListener('click', () => {
+      mostrar(b.dataset.irPrecios);
+      $('#precios').scrollIntoView();
+      $(`#tab-${b.dataset.irPrecios}`).focus({ preventScroll: true });
+    }));
+
+    mostrar(CATEGORIAS[0].id);
+
+    // Resumen de precios en la sección de título (sobre fondo oscuro)
+    $('#titulo-precios').innerHTML = NEGOCIO.precios.titulo.slice().reverse().map(it => filaPrecio(it, 'oscuro')).join('')
+      .replaceAll('class="guia"', 'class="guia" style="border-color: rgba(168,160,154,.45)"');
+  }
+
+  /* ===================== ENCABEZADO Y MENÚ ===================== */
+  function encabezado() {
+    const header = $('#encabezado');
+    const actualizar = () => {
+      const activo = window.scrollY > 30;
+      header.classList.toggle('bg-noche/95', activo);
+      header.classList.toggle('backdrop-blur', activo);
+      header.classList.toggle('shadow-[0_1px_0_rgba(250,248,245,.08)]', activo);
+    };
+    window.addEventListener('scroll', actualizar, { passive: true });
+    actualizar();
+
+    const boton = $('#menu-boton'), menu = $('#menu-movil');
+    const alternar = abrir => {
+      menu.classList.toggle('hidden', !abrir);
+      boton.setAttribute('aria-expanded', abrir);
+      boton.setAttribute('aria-label', abrir ? 'Cerrar menú' : 'Abrir menú');
+      $('#menu-icono-abrir').classList.toggle('hidden', abrir);
+      $('#menu-icono-cerrar').classList.toggle('hidden', !abrir);
+      if (abrir) header.classList.add('bg-noche/95');
+      else actualizar();
+    };
+    boton.addEventListener('click', () => alternar(menu.classList.contains('hidden')));
+    $$('a', menu).forEach(a => a.addEventListener('click', () => alternar(false)));
+  }
+
+  /* =====================================================================
+     CHATBOT (árbol de decisiones + palabras clave, sin API ni costos)
+     Responde SOLO con la información de NEGOCIO. Si no sabe algo, o el
+     usuario quiere cita/compra, ofrece continuar en WhatsApp.
+     ===================================================================== */
+  const INTENCIONES = {
+    saludo:         { hola: 2, buenas: 2, 'buen dia': 2, 'buenos dias': 2, 'que tal': 1, saludos: 2 },
+    horario:        { horario: 3, hora: 2, abren: 3, abierto: 3, abre: 2, cierran: 3, cierra: 3, atienden: 2, domingo: 3, sabado: 2, 'fin de semana': 3, dias: 1 },
+    ubicacion:      { donde: 3, direccion: 3, ubicacion: 3, ubicad: 3, llegar: 3, mapa: 3, calle: 2, vallarta: 3, sucursal: 2, local: 1 },
+    contacto:       { telefono: 3, numero: 2, llamar: 3, correo: 2, email: 3, facebook: 3, redes: 3, contacto: 3, contactar: 3 },
+    precios:        { precio: 2, costo: 2, cuanto: 2, cuesta: 2, cobran: 2, tarifa: 2, lista: 1 },
+    identificacion: { identificacion: 3, tramite: 3, pasaporte: 3, visa: 3, cartilla: 3, credencial: 3, infantil: 3, filiacion: 3, fm3: 3, postal: 2, mignon: 3, documento: 2, medida: 1, migracion: 2 },
+    titulo:         { titulo: 3, titulacion: 3, diploma: 3, unam: 3, sep: 2, ipn: 3, '6x9': 3, analog: 3, 'blanco y negro': 2, revelado: 2, quimic: 2, '4 1x5 1': 3 },
+    digitales:      { digital: 3, archivo: 3, electronic: 3, envio: 2, enviar: 2, mandan: 2, 'por correo': 3, usb: 2 },
+    impresiones:    { impresion: 3, imprim: 3, ampliacion: 3, amplia: 2, copia: 2, '4x6': 3, '6x8': 3, '8x10': 3, '11x14': 3, '16x20': 3, '20x24': 3 },
+    paquetes:       { paquete: 3, sesion: 3, retrato: 2, marco: 3, promocion: 3, promo: 3, pruebas: 2, familiar: 2 },
+    eventos:        { evento: 3, boda: 3, xv: 3, quince: 3, fiesta: 3, bautizo: 3, comunion: 3, social: 3, video: 3, grabacion: 3, 'libro de firmas': 3, firmas: 2, cobertura: 2 },
+    restauracion:   { restaur: 3, antigua: 2, vieja: 2, danad: 2, reparar: 2 },
+    pago:           { pago: 3, pagar: 3, tarjeta: 3, efectivo: 3, transferencia: 3, deposito: 3, credito: 2, debito: 2, meses: 2 },
+    urgente:        { urgente: 3, rapido: 3, rapida: 3, tarda: 3, tardan: 3, entrega: 2, 'hoy mismo': 3, 'al momento': 3, 'mismo dia': 3 },
+    humano:         { cita: 3, agendar: 3, reservar: 3, apartar: 3, contratar: 3, comprar: 3, cotiz: 3, pedido: 3, persona: 3, humano: 3, asesor: 3, 'hablar con': 3, whatsapp: 3 },
+    gracias:        { gracias: 3, adios: 3, bye: 2, 'hasta luego': 3 }
+  };
+  // Intenciones que no son un "tema" (se usan solo si no se detectó un tema concreto)
+  const NO_TEMA = ['saludo', 'precios', 'humano', 'gracias'];
+
+  const SUGERENCIAS_INICIO = ['Horario', 'Precios', 'Fotos para título', 'Ubicación', 'Formas de pago', 'Hablar con una persona'];
+  const SUGERENCIAS_PRECIOS = ['Fotos para trámites', 'Fotos para título', 'Impresiones', 'Paquetes de estudio', 'Eventos y video'];
+
+  function puntuar(texto) {
+    const t = ' ' + normalizar(texto) + ' ';
+    const puntos = {};
+    for (const [intencion, claves] of Object.entries(INTENCIONES)) {
+      let p = 0;
+      for (const [clave, peso] of Object.entries(claves)) {
+        // claves cortas deben coincidir como palabra completa; las largas como inicio de palabra
+        const exacta = clave.length <= 3;
+        const re = new RegExp(`\\s${clave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}${exacta ? '\\s' : ''}`);
+        if (re.test(t)) p += peso;
+      }
+      if (p > 0) puntos[intencion] = p;
+    }
+    return { t, puntos };
+  }
+
+  function elegirIntencion(puntos) {
+    const temas = Object.entries(puntos).filter(([k]) => !NO_TEMA.includes(k)).sort((a, b) => b[1] - a[1]);
+    if (temas.length) return temas[0][0];
+    for (const k of ['humano', 'precios', 'gracias', 'saludo']) if (puntos[k]) return k;
+    return 'desconocido';
+  }
+
+  const lista = items => `<ul>${items.map(i => `<li>${i}</li>`).join('')}</ul>`;
+  const lineaPrecio = it => {
+    const sub = [it.piezas ? `${it.piezas} piezas` : '', it.detalle || ''].filter(Boolean).join(', ');
+    return `<b>${it.nombre}</b>${sub ? ` (${sub})` : ''}: ${dinero(it.precio)}${it.adherible ? `, con adherible ${dinero(it.adherible)}` : ''}`;
+  };
+  const filtrarPorClaves = (items, t) => items.filter(it => (it.claves || []).some(c => t.includes(' ' + c)));
+
+  // Cada respuesta devuelve { html, sugerencias, whatsapp }
+  const RESPUESTAS = {
+    saludo: () => ({
+      html: `¡Hola! Soy el asistente de ${NEGOCIO.nombre}. Te ayudo con horarios, precios, ubicación y fotos para título. ¿Qué necesitas?`,
+      sugerencias: SUGERENCIAS_INICIO
+    }),
+
+    horario: t => {
+      const estado = estadoActual();
+      const domingo = t.includes(' domingo');
+      return {
+        html: `Abrimos de <b>lunes a sábado de 9:00 a 19:00 h</b>. Los <b>domingos</b> atendemos solo con cita previa.<br><br>${estado.texto}` +
+              (domingo ? '<br><br>Para agendar un domingo, escríbenos por WhatsApp.' : ''),
+        whatsapp: domingo ? 'Hola, quiero agendar una cita para domingo.' : null,
+        sugerencias: ['Ubicación', 'Precios', 'Hablar con una persona']
+      };
+    },
+
+    ubicacion: () => ({
+      html: `Estamos en <b>${direccionCompleta()}</b>.<br><a href="${linkMapa()}" target="_blank" rel="noopener">Abrir en Google Maps</a><br><br>${NEGOCIO.horarioTexto}`,
+      sugerencias: ['Horario', 'Precios', 'Contacto']
+    }),
+
+    contacto: () => ({
+      html: 'Puedes contactarnos por:' + lista([
+        `Teléfono: <a href="tel:${NEGOCIO.telefono}">${NEGOCIO.telefonoVisible}</a>`,
+        `WhatsApp: <a href="${linkWhatsApp()}" target="_blank" rel="noopener">${NEGOCIO.whatsappVisible}</a>`,
+        `Correo: <a href="mailto:${NEGOCIO.email}">${NEGOCIO.email}</a>`,
+        `<a href="${NEGOCIO.facebook}" target="_blank" rel="noopener">Facebook</a>`
+      ]),
+      sugerencias: ['Horario', 'Ubicación', 'Precios']
+    }),
+
+    precios: () => {
+      const p = NEGOCIO.precios;
+      return {
+        html: 'Estos son algunos de nuestros precios:' + lista([
+          `Fotos infantiles: ${dinero(p.identificacion[0].precio)} (8 piezas)`,
+          `Credencial y cartilla: ${dinero(p.identificacion[1].precio)} (6 piezas)`,
+          `Pasaporte: ${dinero(p.identificacion[4].precio)}`,
+          `Título UNAM: ${dinero(p.titulo[2].precio)} (6 fotos)`,
+          `Impresiones: desde ${dinero(p.impresiones[0].precio)} (4×6)`,
+          `Paquetes de estudio: desde ${dinero(p.paquetes[0].precio)}`,
+          `Eventos: fotografía social ${dinero(p.eventos[0].precio)}, video ${dinero(p.eventos[1].precio)}`
+        ]) + '¿De cuál quieres el detalle?',
+        sugerencias: SUGERENCIAS_PRECIOS
+      };
+    },
+
+    identificacion: t => {
+      const items = NEGOCIO.precios.identificacion;
+      const encontrados = filtrarPorClaves(items, t);
+      const sinPrecio = ['visa', 'filiacion', 'fm3', 'postal', 'medida', 'migracion'].filter(k => t.includes(' ' + k));
+      let html;
+      if (sinPrecio.length && !encontrados.length) {
+        html = 'Sí hacemos fotos para visa, filiación FM3, postal y medidas especiales. El precio de esa medida te lo confirmamos por WhatsApp.';
+        return { html, whatsapp: 'Hola, quiero saber el precio de fotos para ' + (sinPrecio[0] === 'fm3' ? 'filiación FM3' : sinPrecio[0]) + '.', sugerencias: ['Fotos para trámites', 'Horario'] };
+      }
+      const mostrar = encontrados.length ? encontrados : items;
+      html = (encontrados.length ? '' : 'Precios de fotografías para identificación:') + lista(mostrar.map(lineaPrecio)) +
+             'Hacemos <b>fotografías urgentes</b> para trámites.';
+      if (sinPrecio.length) html += ' Para visa, filiación FM3, postal o medidas especiales, el precio te lo confirmamos por WhatsApp.';
+      return { html, whatsapp: sinPrecio.length ? 'Hola, quiero saber precios de fotos para trámite.' : null, sugerencias: ['Archivos digitales', 'Horario', 'Ubicación'] };
+    },
+
+    titulo: t => {
+      const items = NEGOCIO.precios.titulo;
+      const encontrados = filtrarPorClaves(items, t);
+      const mostrar = encontrados.length ? encontrados : items;
+      return {
+        html: (encontrados.length ? '' :
+              'Las fotos para título se hacen con <b>proceso análogo</b>: óvalo de 6×9 cm en blanco y negro, con <b>revelado químico real</b>, según la normativa de la UNAM, la SEP y el IPN.') +
+              lista(mostrar.map(lineaPrecio)) +
+              'Si tu institución pide otra medida, como título 4.1×5.1 u óvalo mignon, confírmalo por WhatsApp.',
+        whatsapp: 'Hola, quiero información sobre las fotos para título.',
+        sugerencias: ['Horario', 'Ubicación', 'Formas de pago']
+      };
+    },
+
+    digitales: () => ({
+      html: `Entregamos <b>archivos digitales</b> de fotos infantil, credencial cuadro y óvalo por ${dinero(NEGOCIO.precios.identificacion[5].precio)}. También hacemos envío electrónico de tus archivos.`,
+      sugerencias: ['Fotos para trámites', 'Horario']
+    }),
+
+    impresiones: t => {
+      const items = NEGOCIO.precios.impresiones;
+      const encontrados = filtrarPorClaves(items, t);
+      const medida = (t.match(/\s(\d{1,2}x\d{1,2})\s/) || [])[1];
+      if (medida && !encontrados.length) {
+        return {
+          html: `No tengo el precio de una impresión ${medida.replace('x', '×')}. Estas son las medidas con precio:` + lista(items.map(lineaPrecio)),
+          whatsapp: `Hola, quiero saber el precio de una impresión ${medida}.`,
+          sugerencias: ['Paquetes de estudio', 'Restauración']
+        };
+      }
+      return {
+        html: (encontrados.length ? '' : 'Precios de impresión:') + lista((encontrados.length ? encontrados : items).map(lineaPrecio)),
+        sugerencias: ['Paquetes de estudio', 'Restauración', 'Horario']
+      };
+    },
+
+    paquetes: () => ({
+      html: 'Paquetes de estudio en <b>promoción</b>, incluyen marco y pruebas:' + lista(NEGOCIO.precios.paquetes.map(lineaPrecio)) +
+            'Para apartar tu sesión, escríbenos por WhatsApp.',
+      whatsapp: 'Hola, quiero apartar un paquete de estudio.',
+      sugerencias: ['Horario', 'Formas de pago']
+    }),
+
+    eventos: t => {
+      const items = NEGOCIO.precios.eventos;
+      const especificos = ['video', 'grab', 'libro', 'firmas'].some(k => t.includes(' ' + k)) ? filtrarPorClaves(items, t) : [];
+      return {
+        html: (especificos.length ? '' : 'Precios para eventos sociales:') + lista((especificos.length ? especificos : items).map(lineaPrecio)) +
+              `Cubrimos eventos en ${NEGOCIO.zonasEventos.slice(0, -1).join(', ')} y ${NEGOCIO.zonasEventos.at(-1)}. Para revisar disponibilidad de tu fecha, escríbenos por WhatsApp.`,
+        whatsapp: 'Hola, quiero cotizar la cobertura de un evento.',
+        sugerencias: ['Formas de pago', 'Paquetes de estudio']
+      };
+    },
+
+    restauracion: () => ({
+      html: 'Sí, restauramos fotografías antiguas. Para cotizar, envíanos una foto de la imagen por WhatsApp.',
+      whatsapp: 'Hola, quiero cotizar la restauración de una foto.',
+      sugerencias: ['Impresiones', 'Horario']
+    }),
+
+    pago: () => ({
+      html: `Aceptamos <b>${NEGOCIO.pagos.join(' y ')}</b>. Si quieres pagar de otra forma, confírmalo por WhatsApp.`,
+      whatsapp: 'Hola, quiero saber las formas de pago.',
+      sugerencias: ['Precios', 'Horario']
+    }),
+
+    urgente: () => ({
+      html: 'Sí, hacemos <b>fotografías urgentes</b> para trámites. Para confirmar el tiempo de entrega de la medida que necesitas, escríbenos por WhatsApp.',
+      whatsapp: 'Hola, necesito fotos urgentes.',
+      sugerencias: ['Fotos para trámites', 'Horario', 'Ubicación']
+    }),
+
+    humano: () => ({
+      html: 'Claro. Por WhatsApp te atiende una persona del estudio para citas, pedidos y cotizaciones.',
+      whatsapp: 'Hola, vengo de la página web y quiero hablar con alguien del estudio.',
+      sugerencias: []
+    }),
+
+    gracias: () => ({
+      html: '¡Con gusto! Si necesitas algo más, aquí estoy.',
+      sugerencias: SUGERENCIAS_INICIO
+    }),
+
+    desconocido: () => ({
+      html: 'No tengo ese dato en mi información. Para no darte una respuesta equivocada, pregúntalo directo al estudio por WhatsApp.',
+      whatsapp: true,
+      sugerencias: SUGERENCIAS_INICIO
+    })
+  };
+
+  // Atajos de los botones sugeridos que no contienen palabras clave
+  const ALIAS = {
+    'precios': 'cuanto cuesta precio',
+    'fotos para tramites': 'tramite identificacion',
+    'formas de pago': 'pago',
+    'restauracion': 'restauracion',
+    'contacto': 'contacto'
+  };
+
+  function chatbot() {
+    const panel = $('#chat-panel'), lanzador = $('#chat-lanzador'), log = $('#chat-log');
+    const form = $('#chat-form'), entrada = $('#chat-entrada'), sugerencias = $('#chat-sugerencias');
+    let iniciado = false, ocupado = false;
+    const movil = () => window.matchMedia('(max-width: 639px)').matches;
+
+    function abrir() {
+      panel.hidden = false;
+      lanzador.setAttribute('aria-expanded', 'true');
+      lanzador.setAttribute('aria-label', 'Cerrar chat de ayuda');
+      $('#chat-icono-abrir').classList.add('hidden');
+      $('#chat-icono-cerrar').classList.remove('hidden');
+      if (movil()) { document.body.style.overflow = 'hidden'; lanzador.classList.add('hidden'); }
+      if (!iniciado) {
+        iniciado = true;
+        agregarBot(RESPUESTAS.saludo());
+      }
+      setTimeout(() => entrada.focus(), 50);
+    }
+
+    function cerrar() {
+      panel.hidden = true;
+      lanzador.setAttribute('aria-expanded', 'false');
+      lanzador.setAttribute('aria-label', 'Abrir chat de ayuda');
+      $('#chat-icono-abrir').classList.remove('hidden');
+      $('#chat-icono-cerrar').classList.add('hidden');
+      document.body.style.overflow = '';
+      lanzador.classList.remove('hidden');
+      lanzador.focus();
+    }
+
+    function agregar(html, rol) {
+      const li = document.createElement('li');
+      li.className = rol === 'usuario' ? 'flex justify-end' : 'flex justify-start';
+      li.innerHTML = rol === 'usuario'
+        ? `<div class="max-w-[85%] rounded-2xl rounded-br-md bg-vino px-4 py-2.5 text-[0.95rem] text-hoja">${html}</div>`
+        : `<div class="chat-burbuja max-w-[88%] rounded-2xl rounded-bl-md border border-papel-2 bg-hoja px-4 py-3 text-[0.95rem] leading-snug text-tinta">${html}</div>`;
+      log.appendChild(li);
+      log.scrollTop = log.scrollHeight;
+      return li;
+    }
+
+    function pintarSugerencias(opciones = []) {
+      sugerencias.innerHTML = opciones.map(o => `
+        <button type="button" class="shrink-0 rounded-full border border-vino/40 bg-hoja px-3.5 py-1.5 text-[0.9rem] text-vino transition-colors hover:bg-vino hover:text-hoja">${o}</button>`).join('');
+      sugerencias.hidden = !opciones.length;
+    }
+
+    function agregarBot(r, pregunta = '') {
+      let html = r.html;
+      if (r.whatsapp) {
+        const texto = typeof r.whatsapp === 'string'
+          ? r.whatsapp
+          : `Hola, vengo de la página web. Tengo una pregunta: ${pregunta}`;
+        html += `<a href="${linkWhatsApp(texto)}" target="_blank" rel="noopener"
+                   style="text-decoration:none"
+                   class="mt-3 flex items-center justify-center gap-2 rounded-full bg-wa px-4 py-2.5 font-medium text-white">
+                   <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .2C5.5.2.2 5.5.2 12c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.6c1.7.9 3.7 1.4 5.6 1.4 6.5 0 11.8-5.3 11.8-11.8S18.5.2 12 .2z"/></svg>
+                   Continuar en WhatsApp</a>`;
+      }
+      agregar(html, 'bot');
+      pintarSugerencias(r.sugerencias);
+      // las sugerencias cambian la altura del área de mensajes: volver a bajar al final
+      requestAnimationFrame(() => { log.scrollTop = log.scrollHeight; });
+    }
+
+    function responder(textoUsuario) {
+      const texto = textoUsuario.trim();
+      if (!texto || ocupado) return;
+      ocupado = true;
+      agregar(escapar(texto), 'usuario');
+      pintarSugerencias([]);
+
+      const consulta = ALIAS[normalizar(texto)] || texto;
+      const { t, puntos } = puntuar(consulta);
+      const intencion = elegirIntencion(puntos);
+      const r = { ...RESPUESTAS[intencion](t) };
+      // Si además pidió cita, compra o hablar con alguien, siempre ofrecemos WhatsApp
+      if (puntos.humano && !r.whatsapp) r.whatsapp = `Hola, vengo de la página web. ${texto}`;
+
+      const escribiendo = agregar('<span class="puntos" aria-label="Escribiendo"><span></span><span></span><span></span></span>', 'bot');
+      setTimeout(() => {
+        escribiendo.remove();
+        agregarBot(r, texto);
+        ocupado = false;
+      }, 550 + Math.min(texto.length * 8, 450));
+    }
+
+    lanzador.addEventListener('click', () => (panel.hidden ? abrir() : cerrar()));
+    $('#chat-cerrar').addEventListener('click', cerrar);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !panel.hidden) cerrar(); });
+    form.addEventListener('submit', e => { e.preventDefault(); const v = entrada.value; entrada.value = ''; responder(v); });
+    sugerencias.addEventListener('click', e => { const b = e.target.closest('button'); if (b) responder(b.textContent.trim()); });
+
+    // Para pruebas desde la consola del navegador: probarBot('cuánto cuesta el pasaporte')
+    window.probarBot = q => { const { t, puntos } = puntuar(ALIAS[normalizar(q)] || q); return { intencion: elegirIntencion(puntos), puntos }; };
+  }
+
+  /* ===================== VIDEO DE INTRODUCCIÓN =====================
+     Se reproduce sin sonido cuando está a la vista y se pausa al salir.
+     Si la persona lo pausa, ya no se vuelve a reproducir solo. */
+  function videoIntro() {
+    const v = $('#video-intro');
+    if (!v || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let pausadoPorUsuario = false, pausaAutomatica = false;
+    v.addEventListener('pause', () => {
+      if (pausaAutomatica) { pausaAutomatica = false; return; }
+      pausadoPorUsuario = true;
+    });
+    new IntersectionObserver(([entrada]) => {
+      if (pausadoPorUsuario) return;
+      if (entrada.isIntersecting) { v.play().catch(() => {}); }
+      else if (!v.paused) { pausaAutomatica = true; v.pause(); }
+    }, { threshold: 0.5 }).observe(v);
+  }
+
+  /* ===================== INICIO ===================== */
+  pintarDatos();
+  pintarPrecios();
+  encabezado();
+  chatbot();
+  videoIntro();
+  </script>
+</body>
+</html>
